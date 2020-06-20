@@ -118,7 +118,7 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         private val B_DAY = "DAY"
         private val B_SEAT = "SEAT"
         private val CREATE_TABLE_GRADES = ("CREATE TABLE " + TABLE_GRADES +
-                "(" + B_ID + " TEXT PRIMARY KEY AUTOINCREMENT," + B_TIME + " TEXT, " + B_DAY + " TEXT, " + B_SEAT + " INTEGER);")
+                "(" + B_ID + " TEXT PRIMARY KEY," + B_TIME + " TEXT, " + B_DAY + " TEXT, " + B_SEAT + " INTEGER);")
     }
 
     /*companion object {
