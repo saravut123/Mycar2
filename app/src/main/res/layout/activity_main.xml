@@ -20,72 +20,53 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/r1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="6.00" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/r2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="8.00" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/r3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="10.00" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/r4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="13.00" />
-        </LinearLayout>
+        </RadioGroup>
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/radioButton7"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/day"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="15.00" />
-
-            <RadioButton
-                android:id="@+id/radioButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="17.00" />
-
-            <RadioButton
-                android:id="@+id/radioButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="19.00" />
-
-            <RadioButton
-                android:id="@+id/radioButton10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="21.00" />
+                android:ems="10"
+                android:hint="DATE"
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,14 +75,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Check" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/book"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -114,15 +95,22 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/report"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Report" />
+
+            <Button
+                android:id="@+id/RESET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RESET" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/show"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
