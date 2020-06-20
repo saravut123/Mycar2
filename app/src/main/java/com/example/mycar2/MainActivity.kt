@@ -39,8 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         Book!!.setOnClickListener {
 
-            databaseHelper!!.addGradeDetail( id !!.text.toString(), time!!.text.toString(), day!!.text.toString(),
-                seat!!.text.toString())
+            databaseHelper!!.addGradeDetail( id !!.text.toString(), time!!.text.toString(), day!!.text.toString(), seat!!.text.toString())
             time !!.setText("")
             day!!.setText("")
             id!!.setText("")

@@ -20,10 +20,10 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
             if (c.moveToFirst()) {
                 do {
                     id = c.getString(c.getColumnIndex(B_ID))
-                    day = c.getString(c.getColumnIndex(B_DAY))
-                   time = c.getString(c.getColumnIndex(B_TIME))
+                    time = c.getString(c.getColumnIndex(B_TIME))
+                   day = c.getString(c.getColumnIndex(B_DAY))
                     seat = c.getString(c.getColumnIndex(B_SEAT))
-                    gradesArrayList.add(id + " " + day + " " + time + " " + seat)
+                    gradesArrayList.add("รหัส"+id + "เวลา" + time + "วันที่" + day + "จำนวนที่นั่ง" + seat)
                 } while (c.moveToNext())
                 Log.d("array", gradesArrayList.toString())
             }
@@ -81,7 +81,7 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         db.execSQL(CREATE_TABLE_GRADES)
     }
 
-    fun addGradeDetail(id: String, day: String, time: String, seat: String): Long {
+    fun addGradeDetail(id: String, time: String, day: String, seat: String): Long {
         val db = this.writableDatabase
         //val insertSQL = "INSERT INTO " + TABLE_GRADES + "(" + SUBJECT_ID + "," + SUBJECT_NAME +
         //        ", " + SEMESTER + "," + EDU_YEAR + "," + GRADE + ") VALUES (" +
