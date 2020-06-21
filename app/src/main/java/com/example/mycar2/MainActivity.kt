@@ -1,10 +1,12 @@
 package com.example.mycar2
 
 import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
-import android.widget.*
-import kotlinx.android.synthetic.main.activity_main.*
-import android.widget.RadioGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 

@@ -10,6 +10,7 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
     val allSubjectList: ArrayList<String>
         get() {
             val gradesArrayList = ArrayList<String>()
+            var sum = 0
             var id = ""
             var day = ""
             var time = ""
@@ -24,9 +25,18 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
                    day = c.getString(c.getColumnIndex(B_DAY))
                     seat = c.getString(c.getColumnIndex(B_SEAT))
                     gradesArrayList.add("รหัส"+id + "เวลา" + time + "วันที่" + day + "จำนวนที่นั่ง" + seat)
+
                 } while (c.moveToNext())
+                val selectsum = "SELECT time,SUM(seat) as sum_seat  FROM $TABLE_GRADES"
+                val s = db.rawQuery(selectsum, null)
+                if (s.moveToFirst()) {
+                    do {
+                        sum = s.getInt(s.getColumnIndex(B_sumseat))
+                    } while (c.moveToNext())
+                }
                 Log.d("array", gradesArrayList.toString())
             }
+            gradesArrayList.add("ที่นั่งรวม"+sum.toString())
             return gradesArrayList
         }
 
@@ -117,6 +127,7 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         private val B_TIME = "TIME"
         private val B_DAY = "DAY"
         private val B_SEAT = "SEAT"
+        private val B_sumseat =  "sum_seat"
         private val CREATE_TABLE_GRADES = ("CREATE TABLE " + TABLE_GRADES +
                 "(" + B_ID + " TEXT PRIMARY KEY," + B_TIME + " TEXT, " + B_DAY + " TEXT, " + B_SEAT + " INTEGER);")
     }
