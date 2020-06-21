@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         Reset!!.setOnClickListener {
-            databaseHelper!!.resetDatabase() /*hi00*/
+            databaseHelper!!.resetDatabase() /*hi000000*/
         }
     }
 
