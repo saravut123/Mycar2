@@ -86,7 +86,7 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         private val B_TIME = "TIME"
         private val B_DAY = "DAY"
         private val B_SEAT = "SEAT"
-        private val B_sumseat =  "sum_seat"
+        private val B_sumseat =  "sum_seat"/*5655*/
         private val CREATE_TABLE_GRADES = ("CREATE TABLE " + TABLE_GRADES +
                 "(" + B_ID + " TEXT PRIMARY KEY," + B_TIME + " TEXT, " + B_DAY + " TEXT, " + B_SEAT + " INTEGER);")
     }
