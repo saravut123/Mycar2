@@ -60,7 +60,7 @@ class DatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
 
     fun resetDatabase() {
         val db = this.writableDatabase
-        db.execSQL("DROP TABLE IF EXISTS '$TABLE_GRADES'")
+        db.execSQL("DROP TABLE IF EXISTS '$TABLE_GRADES'")/*55555*/
         db.execSQL(CREATE_TABLE_GRADES)
     }
 
